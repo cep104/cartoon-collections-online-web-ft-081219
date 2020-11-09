@@ -1,3 +1,4 @@
+require 'pry'
 def roll_call_dwarves(dwarves)# code an argument here
 
   dwarves.each_with_index{|dwarf, i| puts "#{i+1}.#{dwarf}"} 
@@ -7,6 +8,7 @@ end
 
 def summon_captain_planet(captain)# code an argument here
   captain.collect do |call|
+    binding.pry
     call.capitalize + "!"  
     #capatizes each element then adds ! to each element
   end
