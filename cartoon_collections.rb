@@ -8,7 +8,6 @@ end
 
 def summon_captain_planet(captain)# code an argument here
   captain.collect do |call|
-    binding.pry
     call.capitalize + "!"  
     #capatizes each element then adds ! to each element
   end
@@ -20,8 +19,8 @@ end
 # end
 
 def long_planeteer_calls(planeteer_calls)
-  planeteer_calls.any? do
-     |call| call.length > 4 
+  planeteer_calls.any? do|call| 
+    call.length > 4 
   end
 end
 
@@ -29,7 +28,9 @@ end
 def find_the_cheese(cheeses)
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
+  binding.pry
   cheeses.detect do |cheese| #itterate over array
+    binding.pry
     cheese_types.include?(cheese)
     #search cheese types and see if each cheese is included
     #if it is return the first cheese type that matches
